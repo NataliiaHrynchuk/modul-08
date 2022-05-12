@@ -4,7 +4,8 @@
   "description": "Lesson",
   "main": "app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "parcel src/index.html",
+    "build": "parcel build src/index.html --public-url /modul-08"
   },
   "repository": {
     "type": "git",
@@ -18,9 +19,15 @@
   "homepage": "https://github.com/NataliiaHrynchuk/modul-08#readme",
   "keywords": [],
   "dependencies": {
-    "lodash.throttle": "^4.1.1"
+    "lodash.throttle": "^4.1.1",
+    "@vimeo/player": "^2.16.4",
+    "simplelightbox": "^2.10.3"
   },
   "devDependencies": {
-    "parsel": "^0.3.0"
+    "parcel-bundler": "^1.12.5",
+    "parcel-plugin-handlebars-precompile": "^1.0.2",
+    "parcel-plugin-nuke-dist": "^1.0.1",
+    "posthtml-include": "^1.6.2",
+    "sass": "^1.32.8"
   }
 }
