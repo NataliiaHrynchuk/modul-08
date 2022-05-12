@@ -1,21 +1,21 @@
 {
-  "name": "goit-js-hw-08",
+  "name": "modul-08",
   "version": "1.0.0",
-  "description": "Homework",
-  "main": "index.js",
+  "description": "Lesson",
+  "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/NataliiaHrynchuk/goit-js-hw-08.git"
+    "url": "git+https://github.com/NataliiaHrynchuk/modul-08.git"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/NataliiaHrynchuk/goit-js-hw-08/issues"
+    "url": "https://github.com/NataliiaHrynchuk/modul-08/issues"
   },
-  "homepage": "https://github.com/NataliiaHrynchuk/goit-js-hw-08#readme",
+  "homepage": "https://github.com/NataliiaHrynchuk/modul-08#readme",
   "keywords": [],
   "dependencies": {
     "lodash.throttle": "^4.1.1"

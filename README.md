@@ -1,1 +1,1 @@
-# goit-js-hw-08
+# modul-08
