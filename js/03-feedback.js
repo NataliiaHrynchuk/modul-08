@@ -8,7 +8,15 @@ const refs = {
 
 refs.form.addEventListener('submit', onFormSubmit);
 // refs.textarea.addEventListener('input', throttle(onTextareaInput, 500));//В мене не працює
+refs.textarea.addEventListener('input', onTextareaInput);
 
+refs.form.addEventListener('input', e => {
+    console.log(e.target.name);
+    console.log(e.target.value);
+
+    FormData[e.target.name] = e.target.value;
+    console.log(FormData);
+})
 /*
 * - Зупиняємо поведінку за замовчуванням
 * - Видаляємо повідомлення зі сховища
@@ -30,7 +38,7 @@ function onFormSubmit(evt) {
 */
 
 function onTextareaInput(evt) { 
-    const message = evt.currentTarget.value;
+    const message = evt.target.value;
     // console.log(message);
     localStorage.setItem(STORAGE_KEY, message);
 }
