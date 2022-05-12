@@ -11,16 +11,21 @@
   <body>
     <p><a href="index.html">Go back</a></p>
 
-    <form class="feedback-form" autocomplete="off">
+    <form class="feedback-form js-feedback-form" >
       <label>
-        Email
-        <input type="email" name="email" autofocus />
+        <b>Ім'я</b>
+      
+        <input 
+        type="text" 
+        name="name" 
+        value = "Анонімус"
+        />
       </label>
       <label>
-        Message
-        <textarea name="message" rows="8"></textarea>
+        <b>Повідомлення</b>
+        <textarea name="message" rows="6"></textarea>
       </label>
-      <button type="submit">Submit</button>
+      <button type="submit">Залишити відгук</button>
     </form>
 
     <script src="js/03-feedback.js"></script>
