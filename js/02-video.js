@@ -13,3 +13,5 @@ console.log(JSON.parse(saveUserData));//{name: 'Mango', age: 2}
 
 //--------LocalStorage--------------
 console.log(localStorage);
+localStorage.setItem('my-data', 'hello');
+localStorage.setItem('my-data', )
