@@ -8,7 +8,7 @@ const refs = {
 
 refs.form.addEventListener('submit', onFormSubmit);
 // refs.textarea.addEventListener('input', throttle(onTextareaInput, 500));//В мене не працює
-
+refs.textarea.addEventListener('input', onTextareaInput);
 /*
 * - Зупиняємо поведінку за замовчуванням
 * - Видаляємо повідомлення зі сховища
