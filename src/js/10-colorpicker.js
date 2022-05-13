@@ -1,7 +1,8 @@
-import colorCardTpl from '../templates/color-card.hbs'
+import colorCardTpl from '../templates/color-card.hbs';
+import colorCardsTpl from '../templates/color-cards.hbs'
 import colors from './colors.json';
 
-console.log(colorCardTpl);
+console.log(colorCardsTpl(colors));
 
 
 const palettContainer = document.querySelector('.js-palette');
@@ -11,8 +12,12 @@ palettContainer.insertAdjacentHTML('beforeend', cardsMarkup);
 palettContainer.addEventListener('click', onPalettecontainerClick);
 
 function createColorCardsMarkup (colors) {
+  // -- map-аєм кожен об'єкт масиву:
 //  return colors.map(color => colorCardTpl(color)).join('');//join, щоб сформувати не масив, а строку
-return colors.map(colorCardTpl).join('');//коротший варіант
+// return colors.map(colorCardTpl).join('');//коротший і правильніший варіант, ніж вище
+
+//---або використаємо одразу колекцію карток з color-cards.hbs
+return colorCardsTpl(colors);
 }
 
 function onPalettecontainerClick(evt) {
@@ -88,3 +93,11 @@ function addActiveCardClass (card) {
 //   // execute the compiled template and print the output to the console
 //   console.log(template({ doesWhat: "rocks!" }));
 // </script> 
+
+//---але ми завантажили за допомогою node:
+//   npm install --save-dev parcel-plugin-handlebars-precompile
+//  в папці src створили файл color-card.hbs, в який вставили 
+// шаблон і сюди на початку файлу імпортували його. Створилась ф-ція colorCardTpl
+// ---в папці js створили файл colors.js, в який винесли масив кольорів, 
+//  а сюди їх імпортували
+//--тепер змінили ф-цію createColorCardsMarkup
