@@ -1,0 +1,29 @@
+[
+    {
+        "name": "Австралія",
+        "capital": "Канберра",
+        "currency": "австралійський долар",
+        "language": "англійська",
+        "population": 24970200,
+        "flag": "https://wikiway.com/upload/iblock/742.800pxFlagofAustraliasvg.png",
+        "infected": false
+    },
+    {
+        "name": "Болівія",
+        "capital": "Сукре",
+        "currency": "Болівіано (BOB)",
+        "language": "Іспанська, кечуа, аймара, гуарані",
+        "population": 10461053,
+        "flag": "https://wikiway.com/upload/iblock/5ed/800px-Flag_of_Bolivia.png",
+        "infected": true
+    },
+    {
+        "name": "Великобританія",
+        "capital": "Лондон",
+        "currency": "Фунт стерлінгів (GBR)",
+        "language": "Англійська",
+        "population": 63395574,
+        "flag": "https://wikiway.com/upload/iblock/",
+        "infected": false
+    }
+]

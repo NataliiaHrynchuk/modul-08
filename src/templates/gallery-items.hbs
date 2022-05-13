@@ -1,0 +1,24 @@
+
+{{!-- Шаблон від замовника --}}
+{{!-- <li class="gallery__item">
+    <div class="gallery__thumb">
+        <img src="" alt="Прапор країни" width="320">
+    </div>
+    <h2>Країна</h2>
+    <p><b>Столиця: столиця</b></p>
+    <p><b>Валюта:</b>тугрик</p>
+    <p><b>Офіційна мова:</b>немає</p>
+    <p><b>Населення:</b>0 осіб</p>
+</li> --}}
+{{#each this}}
+<li class="gallery__item">
+    <div class="gallery__thumb">
+        <img src="{{flag}}" alt="Прапор {{name}}" width="320">
+    </div>
+    <h2>{{name}}</h2>
+    <p><b>Столиця:</b>{{capital}}</p>
+    <p><b>Валюта:</b>{{currency}}</p>
+    <p><b>Офіційна мова:</b>{{language}}</p>
+    <p><b>Населення:</b>{{population}}чол</p>
+</li>
+{{/each}}
