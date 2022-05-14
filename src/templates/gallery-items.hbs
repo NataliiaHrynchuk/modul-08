@@ -21,8 +21,11 @@
     <p><b>Офіційна мова:</b>{{language}}</p>
     <p><b>Населення:</b>{{population}}чол</p>
 
-    {{#if infected}}
-    <p style="color:brown">Все пропало!!!</p>
+    {{#if infected}}  
+    <p style="color:brown;">Все пропало!!!</p>
     {{/if}}
+    {{#unless infected}}
+    <p style="color: green;">Фух, пронесло</p>
+    {{/unless}}
 </li>
 {{/each}}

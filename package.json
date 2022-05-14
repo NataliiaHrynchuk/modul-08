@@ -4,8 +4,8 @@
   "description": "Lesson",
   "main": "app.js",
   "scripts": {
-    "dev": "parcel src/index.html",
-    "build": "parcel build src/index.html --public-url /modul-08"
+    "dev": "parcel src/*.html",
+    "build": "parcel build src/*.html --public-url /modul-08"
   },
   "repository": {
     "type": "git",
