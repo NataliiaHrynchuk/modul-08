@@ -1,5 +1,5 @@
 import '../css/common.css';
-import'../css/01-gallery.css';
+import'../css/04-gallery.css';
 import countries from './countries.json';
 import itemsTemplate from '../templates/gallery-items.hbs';
 
