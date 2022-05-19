@@ -1,12 +1,6 @@
 console.log('Module 8.2');
 
-let items = [
-  { id: '1', text: 'молоко', isDone: false },
-  { id: '2', text: 'сметана', isDone: true },
-  { id: '3', text: 'сир', isDone: false },
-  { id: '4', text: 'хліб', isDone: true },
-  { id: '5', text: 'масло', isDone: false },
-];
+let items = [];
 
 const itemTemplate = ({ id, isDone, text }) => `
 <li data-id="${id}">
@@ -21,7 +15,24 @@ const refs = {
   ul: document.querySelector('ul'),
   form: document.querySelector('form'),
   };//Посилання на елементи, які у нас є: список (ul) і форма (form)
+//--я хочу, щоб кожного разу при зміні даних ці зміни зберігались, а коли
+//-- я наступного разу відкрию сторінку, то в мене був би список, який 
+//-- зберігся з минулого разу
 
+//--ф-ція loadData буде завантажувати дані
+const loadData = () => {
+  try {
+    items = JSON.parse(localStorage.getItem('todos'));
+  } catch(error) {
+    items = [];
+    console.log(error.message);
+  }
+};
+
+//--ф-ція saveData буде зберігати дані
+const saveData = () => {
+  localStorage.setItem('todos', JSON.stringify(items));
+};
 
 const handleIsDoneChange = (event) => {
 const parent = event.target.closest('li');//батьківський елемент клікнутого
@@ -61,6 +72,7 @@ const newItem = {
 // console.log(newItem);
 //---пушимо новостворений об'єкт в айтеми----
 items.push(newItem);
+saveData();//збереження даних
 renderList();//формуємо новий список
 refs.form.reset();//очищаємо поле для введення після кожного івенту
 };
@@ -106,7 +118,8 @@ case 'BUTTON':
 default:
   break;
 }
-renderList();
+saveData();//збереження даних
+renderList();//формуємо новий список
 };
 
 //-----Ф-ція, яка видаляє всі попередні елементи зі списку і генерує нам 
@@ -123,7 +136,5 @@ refs.ul.insertAdjacentHTML('beforeend', list);
 
 refs.form.addEventListener('submit', handleSubmit);// Підписка на сабміт
 refs.ul.addEventListener('click', handleListClick);
-
+loadData();//завантаження даних
 renderList();//Генеруємо список перший раз після старту програми з масиву, який в нас є
-
-
