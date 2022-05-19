@@ -16,7 +16,8 @@ app.get('/', (req, res) => {
 app.get('/about', (req, res) => {
     res.send('about tro-lo-lo');
   });
-  app.get('/users', (req, res) => {
+
+app.get('/users', (req, res) => {
     res.send(users);
   });
 
