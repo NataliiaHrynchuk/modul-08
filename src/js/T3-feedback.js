@@ -1,16 +1,18 @@
 var throttle = require('lodash.throttle');
 
 const STORAGE_KEY = 'feedback-form-state';
+
 const refs = {
     form: document.querySelector('form'),
     };
 
     refs.form.addEventListener('submit', onFormSubmit);
     refs.form.addEventListener('input', throttle(onFormInput, 500));
+    const formData = {};
     
 loadData();
 
-const formData = {};
+
 
 
 function loadData() {
@@ -18,7 +20,9 @@ function loadData() {
         
     if (feedbackObject) {
         refs.form.elements.email.value = feedbackObject.email;
+        formData.email = refs.form.elements.email.value;
         refs.form.elements.message.value = feedbackObject.message;
+        formData.message = refs.form.elements.message.value;
     }     
 };
 
