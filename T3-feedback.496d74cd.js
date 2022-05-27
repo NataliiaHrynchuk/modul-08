@@ -4,4 +4,4 @@ var t=arguments[3],n="Expected a function",e=NaN,i="[object Symbol]",r=/^\s+|\s+
 },{}],"uTaP":[function(require,module,exports) {
 var e=require("lodash.throttle");const t="feedback-form-state",m={form:document.querySelector("form")};m.form.addEventListener("submit",o),m.form.addEventListener("input",e(s,500));const a={};function l(){const e=JSON.parse(localStorage.getItem(t));e&&(m.form.elements.email.value=e.email,a.email=m.form.elements.email.value,m.form.elements.message.value=e.message,a.message=m.form.elements.message.value)}function s(e){e.preventDefault(),a.email=m.form.elements.email.value||"",a.message=m.form.elements.message.value||"",localStorage.setItem(t,JSON.stringify(a))}function o(e){if(e.preventDefault(),l(),""===m.form.elements.email.value||""===m.form.elements.message.value)return alert("Всі поля мають бути заповнені!");console.log(a),m.form.reset(),localStorage.removeItem(t)}l();
 },{"lodash.throttle":"FNyO"}]},{},["uTaP"], null)
-//# sourceMappingURL=/modul-08/T3-feedback.2dcf8e31.js.map
+//# sourceMappingURL=/modul-08/T3-feedback.496d74cd.js.map
