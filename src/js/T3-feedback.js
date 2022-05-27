@@ -1,7 +1,6 @@
 var throttle = require('lodash.throttle');
 
 const STORAGE_KEY = 'feedback-form-state';
-
 const refs = {
     form: document.querySelector('form'),
     };
@@ -11,9 +10,6 @@ const refs = {
     const formData = {};
     
 loadData();
-
-
-
 
 function loadData() {
     const feedbackObject = JSON.parse(localStorage.getItem(STORAGE_KEY));
