@@ -96,6 +96,7 @@ console.log('delete');
 items = items.filter(item => item.id !== id);//в новий список потрапляють лише ті item, у яких
 // id не співпадає з id елемента, на кнопку якого клікнули
 }
+
 const handleListClick = (event) => {
 if (event.target === event.currentTarget) return;// якщо клік припадає на ul, то виходимо з ф-ції
 //  console.log(event.target);//щоб зрозуміти, на який item ми потрапили при кліку
